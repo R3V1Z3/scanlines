@@ -14,12 +14,24 @@
         }
 
         .outer {
+            animation: scan 10s linear infinite;
             background: cornflowerblue;
             position: absolute;
-            height: 3840px;
-            width: 2160px;
+            height: 100%;
+            width: 100%;
             transform-origin: center;
-            padding: 1000px;
+            background: linear-gradient( to bottom, #000, #000 50%, #ccc 50%, #ccc );
+            background-size: 100% 6px;
+            mix-blend-mode: hard-light;
+            background-position-y: 0px;
+            background-color: black;
+            background-blend-mode: hard-light;
+        }
+
+        @keyframes scan {
+            0% { background-position-y: 0px; }
+            50% { background-position-y: 100px; }
+            100% { background-position-y: 0px; }
         }
     </style>
 </head>
